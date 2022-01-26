@@ -1,4 +1,5 @@
 const fs = require('fs')
+const path = require('path')
 
 const express = require('express')
 const app = express()
@@ -13,6 +14,7 @@ const renderer = vueServerRenderer.createBundleRenderer(serverBundle, {
 })
 
 
+
 app.get('*', (req, res) => {
     renderer.renderToString((err, html) => {
         if(err) {
@@ -22,6 +24,8 @@ app.get('*', (req, res) => {
         res.end(html)
     })
 })
+
+app.use(express.static(__dirname + 'dist')) // 挂载静态资源目录
 
 app.listen(8080, () => {
     console.log('server start...')
