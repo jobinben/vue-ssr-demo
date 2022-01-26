@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js",
+    "exp": "node server-express.js",
+    "koa": "node server-koa.js",
     "client:dev": "webpack-dev-server --config ./build/webpack.client.js --mode development",
     "client:build": "webpack --config ./build/webpack.client.js --mode production",
     "server:build": "webpack --config ./build/webpack.server.js --mode production"
@@ -27,6 +28,9 @@
     "css-loader": "^6.5.1",
     "express": "^4.17.2",
     "html-webpack-plugin": "^5.5.0",
+    "koa": "^2.13.4",
+    "koa-router": "^9.4.0",
+    "koa-static": "^5.0.0",
     "vue": "^2.6.14",
     "vue-loader": "^15.9.8",
     "vue-server-renderer": "^2.6.14",

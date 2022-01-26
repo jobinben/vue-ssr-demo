@@ -1,15 +1,17 @@
 <!-- author: 大冰 -->
 <template>
     <div id="app">
-        <div class="demo">
-            这是一段内容
-        </div>
+        <div class="demo" @click="handleClicked">这是一段内容</div>
     </div>
 </template>
 
 <script>
 export default {
-
+    methods: {
+        handleClicked() {
+            console.log(' you clicked me!!!')
+        },
+    },
 }
 </script>
 <style scoped>
